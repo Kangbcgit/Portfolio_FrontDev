@@ -1,13 +1,13 @@
-import { useEffect, useRef } from "react";
-import { Routes, Route } from 'react-router-dom';
-import Background_VS from "./Component/Background_VS/Background_VS";
+import { Route, Routes } from 'react-router-dom';
+import Mainpage from './Pages/Mainpage';
 function App() {
   
   return (
     <>
-      <Background_VS />
       <Routes>
-
+        <Route path='/' element={
+          <Mainpage />
+        } />
       </Routes>
     </>
   );
