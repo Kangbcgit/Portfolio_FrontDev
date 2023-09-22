@@ -18,7 +18,8 @@ const GlobalStyle = createGlobalStyle`
     --main-bg: #1E1E1E;
     --tool_bar-bg: #3C3C3C;
     --side_bar-bg: #333333;
+    --base_color: #c4c4c4;
   }
-`;
+`;       
 
 export default GlobalStyle

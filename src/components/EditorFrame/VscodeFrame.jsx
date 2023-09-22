@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Children } from 'react'
 import { styled } from 'styled-components';
 
 const Wrapper = styled.div`
@@ -10,9 +10,10 @@ const Wrapper = styled.div`
   overflow: hidden;
 `;
 
-function VscodeFrame() {
+function VscodeFrame(props) {
   return (
-    <Wrapper></Wrapper>
+    <Wrapper>
+    </Wrapper>
   )
 }
 

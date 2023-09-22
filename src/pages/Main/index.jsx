@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import { styled } from 'styled-components'
 const VscodeFrame = styled.div`
   display: flex;
@@ -9,11 +10,38 @@ const VscodeFrame = styled.div`
   overflow: hidden;
 `;
 const Toolbar = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   width: 100%;
   height: 35px;
 
+  font-size: 13px;
+  font-weight: normal;
+
   background: var(--tool_bar-bg);
+  color: var(--base_color);
+  &>.left {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    font-weight: 500;
+    &>img {
+      width: 17px;
+      height: 17px;
+      object-fit: cover;
+      margin-left: 8px;
+      filter: brightness(1.05)
+    }
+  }
+  &>.center {
+    height: 22px;
+    &>h1 {
+      font-size: 13.6px;
+      font-weight: normal;
+    }
+  }
 `;
 const MiddleContents = styled.div`
   display: flex;
@@ -65,7 +93,7 @@ const MainVisual = styled.div`
   height: 906px;
 `;
 const Tabs = styled.div`
-  height: 35px;
+  height: 35px; 
 `;
 const TabContent = styled.div`
   height: 871px;
@@ -77,10 +105,26 @@ const Statusbar = styled.div`
 
   background: #007FD4;
 `;
-function Background_VS(props) {
+function Main(props) {
   return (
     <VscodeFrame>
-      <Toolbar></Toolbar>
+      <Toolbar>
+        <div className="left">
+          <img src={`${process.env.PUBLIC_URL}/images/logo_top.png`} alt="" />
+          <Link to='#none'>파일(F)</Link>
+          <Link to='#none'>편집(E)</Link>
+          <Link to='#none'>선택 영역(S)</Link>
+          <Link to='#none'>보기(V)</Link>
+          <Link to='#none'>이동(G)</Link>
+          <Link to='#none'>실행(R)</Link>
+          <Link to='#none'>터미널(T)</Link>
+          <Link to='#none'>도움말(H)</Link>
+        </div>
+        <div className="center">
+          <h1>Kang ByungChan - Visual Studio Code</h1>
+        </div>
+        <div className="right"></div>
+      </Toolbar>
       <MiddleContents>
         <Sidebar></Sidebar>
         <DirectoryView>
@@ -99,4 +143,4 @@ function Background_VS(props) {
   )
 }
 
-export default Background_VS
+export default Main

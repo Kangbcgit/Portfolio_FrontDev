@@ -11,7 +11,9 @@ const ToolbarFrame = styled.div`
 
 function Toolbar() {
   return (
-    <ToolbarFrame></ToolbarFrame>
+    <ToolbarFrame>
+      
+    </ToolbarFrame>
   )
 }
 
